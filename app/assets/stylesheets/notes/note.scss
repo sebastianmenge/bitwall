@@ -1,8 +1,17 @@
-.row {
-  height: 33.3%;
-}
-
 .note-element {
+  padding: 15px;
   height: 100%;
   display: inline-block;
+  float: left;
+  border-width: 0 0 1px 1px;
+  border-style: dotted;
+  border-color: $note-border;
+  color: #2b2b2b;
+  h3 {
+    font-size: 21px;
+    margin: 0 0 14px;
+  }
+  p {
+    font-size: 15px;
+  }
 }

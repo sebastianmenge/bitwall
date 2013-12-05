@@ -1,3 +1,3 @@
 App.Router.map ->
-  @resource 'wall', { path: '/wall/:wall_id' }, ->
-    @resource 'notes', { path: '/notes' }
+  @resource 'walls', { path: '/walls' }
+  @resource 'wall', { path: '/wall/:wall_id' }

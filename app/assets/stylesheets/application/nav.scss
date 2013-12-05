@@ -6,4 +6,11 @@ header {
   background: #232323;
   height: 100%;
   width: 50px;
+  .logo {
+    background: image-url('bw-logo.png') center bottom no-repeat;
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    bottom: 16px;
+  }
 }

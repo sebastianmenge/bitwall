@@ -1,3 +1,19 @@
 <div class="wall">
-  {{outlet}}
+  <div class="row row1">
+    {{#each row1}}
+      {{view App.NoteView color=color width=width}}
+    {{/each}}
+  </div>
+
+  <div class="row row2">
+    {{#each row2}}
+      {{view App.NoteView color=color width=width}}
+    {{/each}}
+  </div>
+
+  <div class="row row3">
+    {{#each row3}}
+      {{view App.NoteView color=color width=width}}
+    {{/each}}
+  </div>
 </div>

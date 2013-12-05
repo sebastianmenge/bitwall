@@ -5,5 +5,5 @@ App.NoteView = Ember.View.extend
   style: (->
     color = @get('color')
     width = @get('width')
-    "background: #{color};width: #{width}%"
+    "background: #{color};width: #{width}%;"
   ).property('width', 'color')

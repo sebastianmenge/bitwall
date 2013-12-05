@@ -2,4 +2,15 @@
   width: 100%;
   height: 100%;
   background:#7c7c7c;
+  .row {
+    height: 33.3%;
+    .note-element:last-of-type {
+      border-right: none;
+    }
+  }
+  .row:last-of-type {
+    .note-element {
+      border-bottom: none;
+    }
+  }
 }
