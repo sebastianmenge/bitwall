@@ -1,4 +1,9 @@
 Bitwall::Application.routes.draw do
+  namespace :api do
+    resources :walls
+    resources :notes
+  end
+
   root 'home#index'
 
   # Example of regular route:

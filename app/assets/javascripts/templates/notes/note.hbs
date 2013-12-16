@@ -1,3 +1,5 @@
-<h3>{{title}}</h3>
-<p>{{body}}</p>
+{{#view App.NoteDisplayView class="display-area"}}
+  {{note.body}}
+{{/view}}
 
+{{view App.NoteEditingView class="editing-area" value=note.body}}

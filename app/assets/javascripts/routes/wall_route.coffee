@@ -1,9 +1,9 @@
 App.WallsRoute = Ember.Route.extend
   model: ->
-    @get('store').find('wall', 1)
+    App.Wall.fetch()
   afterModel: (walls, transition)->
-    @transitionTo('wall', walls)
+    @transitionTo('wall', walls.objectAt(0))
 
 App.WallRoute = Ember.Route.extend
   model: (params)->
-    @get('store').find('wall', params.wall_id)
+    App.Wall.fetch(params.wall_id)

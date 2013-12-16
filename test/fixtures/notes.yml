@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  color: MyString
+  width: MyString
+  row: 1
+  wall_id: 
+
+two:
+  body: MyText
+  color: MyString
+  width: MyString
+  row: 1
+  wall_id: 

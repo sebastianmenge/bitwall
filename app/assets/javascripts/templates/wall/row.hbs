@@ -1,0 +1,5 @@
+{{#each note in view.notes itemController="note"}}
+  {{view App.NoteView color=note.color width=note.width}}
+{{/each}}
+
+{{#view App.CreateNoteView class="create-note"}}+{{/view}}
