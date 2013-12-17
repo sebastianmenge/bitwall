@@ -4,6 +4,15 @@ App.NoteView = Ember.View.extend
   templateName: "notes/note"
   style: (->
     color = @get('color')
-    # width = @get('width')
     "background: #{color};"
   ).property('color')
+
+  mouseEnter: ->
+    @toggleSettings('In')
+
+  mouseLeave: ->
+    @toggleSettings('Out')
+
+  toggleSettings: (toggle, time=100)->
+    settings = @.$().find('.note-settings')
+    settings["fade#{toggle}"](time)

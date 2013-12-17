@@ -1,11 +1,17 @@
 App.NoteController = Ember.ObjectController.extend
   needs: ['wall']
+  init: ->
+    notes = @get('controllers.wall.notes')
+    @set('allNotes', notes)
 
-  update: (value)->
-    $.ajax
-      type: 'PUT',
-      url:  "api/notes/#{@get('id')}"
-      data:
-        note: value
-      dataType: "JSON",
-      success: (data)->
+  actions:
+    update: (value)->
+      note = @get('content')
+      note.saveRecord()
+
+    delete: ->
+      alert "You really wanna delete this note?"
+      note = @get('content')
+      note.deleteRecord()
+      @allNotes.removeObject(note)
+

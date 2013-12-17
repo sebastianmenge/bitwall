@@ -6,3 +6,10 @@ App.Wall = RL.Model.extend
   height2:    RL.attr('number')
   height3:    RL.attr('number')
   height4:    RL.attr('number')
+  slug: (->
+    "#{@get('id')}-#{@get('name')}"
+  ).property('id', 'name')
+
+# App.RESTAdapter.map("App.Wall", {
+#   primaryKey: "slug"
+# });

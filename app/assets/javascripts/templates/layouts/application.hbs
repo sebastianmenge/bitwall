@@ -1,4 +1,50 @@
 <header>
+  <div class="add-wall-row foldout-menu">
+    <button class="show-menu">&#10133;</button>
+    <ul>
+      <li>
+        {{#view App.AddRemoveView action="createWall"}}
+          + New wall
+        {{/view}}
+      </li>
+      <li>
+        {{#view App.AddRemoveView action="createRow"}}
+          + New row
+        {{/view}}
+      </li>
+    </ul>
+  </div>
+  <div class="remove-wall-row foldout-menu">
+    <button class="show-menu">&#59177;</button>
+    <ul>
+      <li>
+        {{#view App.AddRemoveView action="deleteWall"}}
+          + Remove wall
+        {{/view}}
+      </li>
+      <li>
+        {{#view App.AddRemoveView action="deleteRow"}}
+          + Remove row
+        {{/view}}
+      </li>
+    </ul>
+  </div>
+  <div class="all-walls foldout-menu">
+    <button class="show-menu">&#128248;</button>
+    <ul>
+      <li>
+        {{#view App.AddRemoveView action="deleteWall"}}
+          Personal
+        {{/view}}
+      </li>
+      <li>
+        {{#view App.AddRemoveView action="deleteRow"}}
+          Work
+        {{/view}}
+      </li>
+    </ul>
+  </div>
+
   <div class="logo"></div>
 </header>
 {{outlet}}

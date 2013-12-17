@@ -3,6 +3,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require handlebars
+//= require underscore-min.js
 //= require ember
 //= require ember-restless
 //= require_self

@@ -3,22 +3,30 @@ App.WallController = Ember.ObjectController.extend
     @_super()
 
   actions:
+    createRow: ->
+      rows = @get('rows')
+      @set('rows', rows + 1)
+
+    createWall: ->
+      alert "create wall"
+
+    deleteRow: ->
+      rows = @get('rows')
+      @set('rows', rows - 1)
+
+    deleteWall: ->
+      alert "delete wall"
+
     createNote: (row)->
       wall_id = @get('id')
       note = App.Note.create
         wallId: wall_id
         color: '#efe387'
         row: row
-        width: "#{@deductedAmount(row)}"
-      @get('notes').addObject(note)
+        width: null
       note.saveRecord()
+      @get('notes').addObject(note)
 
-  deductedAmount: (row)->
-    notesPerRow = @get("row_#{row}")
-    notesPerRow.forEach (note)->
-      deductedWidth = parseInt(note.get('width')) - 5
-      note.set('width', deductedWidth)
-    notesPerRow.length * 5
 
   notes: (->
     Ember.ArrayProxy.createWithMixins Ember.SortableMixin,

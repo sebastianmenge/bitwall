@@ -4,13 +4,10 @@ App.RowView = Ember.View.extend
   attributeBindings: ['style', 'data-row']
   templateName: 'wall/row'
 
-  style: (->
-    height = @get("height")
-    "height: #{height}%;"
-  ).property('style', 'height')
   rowNumber: (->
     "row-#{@get('row')}"
   ).property('rowNumber', 'row')
+
   'data-row': (->
     @get('row')
   ).property('data-row', 'row')
