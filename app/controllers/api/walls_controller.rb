@@ -1,17 +1,22 @@
 module Api
   class WallsController < BaseController
+    before_filter :set_wall, only: [:show, :destroy, :update]
     def index
-      @walls = Wall.all
+      @walls = Wall.order('id ASC')
       render json: @walls
     end
 
     def show
-      @wall = Wall.find(params[:id])
       render json: @wall
     end
 
+    def update
+      @wall.update(wall_params)
+      render json: {status: "updated"}
+    end
+
     private
-      def set_banner
+      def set_wall
         @wall = Wall.find(params[:id])
       end
 

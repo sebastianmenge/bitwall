@@ -21,6 +21,12 @@
     position: relative;
     width: 100%;
     padding-right: 35px;
+    .note-element:last-of-type {
+      border-right: none;
+    }
+    &.highlight {
+      border: 2px dashed white;
+    }
   }
   .row:last-of-type {
     border-bottom: none;

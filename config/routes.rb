@@ -1,7 +1,9 @@
 Bitwall::Application.routes.draw do
   namespace :api do
     resources :walls
-    resources :notes
+    resources :notes do
+      post 'batch_destroy', on: :collection
+    end
   end
 
   root 'home#index'

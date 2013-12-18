@@ -10,6 +10,7 @@ App.Wall = RL.Model.extend
     "#{@get('id')}-#{@get('name')}"
   ).property('id', 'name')
 
-# App.RESTAdapter.map("App.Wall", {
-#   primaryKey: "slug"
-# });
+  numberOfRows: (->
+    rows = @get('rows')
+    if rows > 0 then [1..rows] else []
+  ).property('rows')

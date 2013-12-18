@@ -3,17 +3,18 @@
   position: absolute;
   top: 0;
   right: 0px;
-  background: #F7F7F7;
-  color: #7A7A7A;
+  background: #4B4B4B;
+  color: #EBEBEB;
   height: 100%;
   width: 35px;
   border: none;
   cursor: pointer;
-  font-size: 47px;
+  font-size: 58px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   outline: none;
   &:hover {
-    color: #363636;
+    background: darken(#4B4B4B, 5%);
+    color: #f7f7f7;
   }
 }
 
@@ -58,8 +59,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 28px;
-    font-size: 25px;
+    height: 35px;
+    font-size: 36px;
     z-index: 5;
     display: none;
     button { cursor: pointer; }
@@ -71,7 +72,7 @@
       background: none;
       border: none;
       &:hover {
-        color: rgba(0, 0, 0, 0.7);
+        color: rgba(0, 0, 0, 0.5);
       }
     }
   }

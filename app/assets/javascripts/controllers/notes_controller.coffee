@@ -10,8 +10,8 @@ App.NoteController = Ember.ObjectController.extend
       note.saveRecord()
 
     delete: ->
-      alert "You really wanna delete this note?"
-      note = @get('content')
-      note.deleteRecord()
-      @allNotes.removeObject(note)
+      if confirm "You really wanna delete this note?"
+        note = @get('content')
+        note.deleteRecord()
+        @allNotes.removeObject(note)
 

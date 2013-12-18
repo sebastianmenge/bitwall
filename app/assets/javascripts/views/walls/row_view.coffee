@@ -15,4 +15,4 @@ App.RowView = Ember.View.extend
   notes: (->
     row = @get('row')
     @get("controller.row_#{row}")
-  ).property('row', 'controller.row_1', 'controller.row_2', 'controller.row_3', 'controller.row_4')
+  ).property('row', 'controller.row_1', 'controller.row_2', 'controller.row_3', 'controller.row_4', 'controller.row_4')
