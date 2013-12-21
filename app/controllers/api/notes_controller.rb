@@ -2,7 +2,7 @@ module Api
   class NotesController < BaseController
     before_filter :set_note, only: [:update, :destroy]
     def index
-      @notes = Note.all.order("id DESC")
+      @notes = Note.all
       render json: @notes
     end
 
@@ -27,7 +27,7 @@ module Api
       @wall.update(rows: params[:rows])
       Note.destroy_all({id: params[:ids]})
 
-      render json: {status: "batch destroyed"}
+      render json: {status: "batch destroy executed"}
     end
 
     private

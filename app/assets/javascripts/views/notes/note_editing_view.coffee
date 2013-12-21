@@ -5,9 +5,4 @@ App.NoteEditingView = Ember.TextArea.extend
   focusOut: ->
     @.$().hide()
     @.$().prev('.display-area').show()
-    @triggerUpdate()
-
-  triggerUpdate: ->
-    @triggerAction
-      action: 'update'
-      target: @get('parentView.controller')
+    @get('parentView.controller').send('update')

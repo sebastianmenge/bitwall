@@ -2,8 +2,8 @@
 //= jquery-ui-1.10.3.custom.min
 //= require jquery_ujs
 //= require turbolinks
-//= require handlebars
 //= require underscore-min.js
+//= require handlebars
 //= require ember
 //= require ember-restless
 //= require_self

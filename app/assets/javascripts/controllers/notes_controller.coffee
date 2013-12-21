@@ -5,8 +5,9 @@ App.NoteController = Ember.ObjectController.extend
     @set('allNotes', notes)
 
   actions:
-    update: (value)->
+    update: (obj)->
       note = @get('content')
+      note.setProperties(obj)
       note.saveRecord()
 
     delete: ->

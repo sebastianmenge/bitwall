@@ -1,7 +1,9 @@
 <div class="wall">
-  {{#each row in numberOfRows}}
+  {{#each row in rows}}
     {{view App.RowView height=height1 row=row}}
   {{/each}}
 </div>
-
+<div class="new-wall-overlay">
+  {{view App.NewWallView placeholder="Your wall name"}}
+</div>
 

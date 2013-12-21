@@ -10,9 +10,19 @@ module Api
       render json: @wall
     end
 
+    def create
+      @wall = Wall.create(wall_params)
+      render json: @wall
+    end
+
     def update
       @wall.update(wall_params)
       render json: {status: "updated"}
+    end
+
+    def destroy
+      @wall.destroy
+      render json: @wall
     end
 
     private
@@ -21,7 +31,7 @@ module Api
       end
 
       def wall_params
-        params.require(:wall).permit(:name, :rows, :height_1, :height_2, :height_3, :height_4)
+        params.require(:wall).permit(:name, {:rows => []}, :height_1, :height_2, :height_3, :height_4)
       end
   end
 end

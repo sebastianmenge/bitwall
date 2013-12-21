@@ -1,9 +1,6 @@
-App.CreateNoteView = Ember.View.extend Ember.TargetActionSupport,
+App.CreateNoteView = Ember.View.extend
   tagName: 'button'
   click: ->
     ctrl = @get('parentView.controller')
     row = @.$().parents('.row').data('row')
-    @triggerAction
-      action: 'createNote'
-      target: ctrl
-      actionContext: row
+    ctrl.send('createNote', row)

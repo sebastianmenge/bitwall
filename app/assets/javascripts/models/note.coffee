@@ -1,7 +1,7 @@
 App.Note = RL.Model.extend
   wallId:   RL.attr('number')
   title:     RL.attr('string')
-  body:     RL.attr('string')
+  body:     RL.attr('string', { defaultValue: "" })
   color:     RL.attr('string')
   width:     RL.attr('string')
   row:        RL.attr('number')

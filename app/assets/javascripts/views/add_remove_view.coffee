@@ -2,12 +2,12 @@ App.AddRemoveView = Ember.View.extend Ember.TargetActionSupport,
   tagName: 'button'
   click: ->
     action = @get('action')
-    rowNumber = @get('row')
-    ctrl = @get('controller.controllers.wall')
-    @triggerAction
-      action: action
-      target: ctrl
-      actionContext: rowNumber
+    if @get('target') == 'view'
+      @[action]()
+    else
+      rowNumber = @get('row')
+      ctrl = @get('controller.controllers.wall')
+      ctrl.send(action, rowNumber)
 
   mouseEnter: ->
     if @get('action') == "deleteRow"
@@ -15,3 +15,6 @@ App.AddRemoveView = Ember.View.extend Ember.TargetActionSupport,
 
   mouseLeave: ->
     $(".row").removeClass('highlight')
+
+  showForm: ->
+    $('.new-wall-overlay').fadeIn()

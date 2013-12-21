@@ -2,10 +2,10 @@ App.NoteView = Ember.View.extend
   classNames: ['note-element']
   attributeBindings: ['style']
   templateName: "notes/note"
-  style: (->
-    color = @get('color')
-    "background: #{color};"
-  ).property('color')
+  # style: (->
+  #   color = @get('color')
+  #   "background: #{color};"
+  # ).property('color')
 
   mouseEnter: ->
     @toggleSettings('In')

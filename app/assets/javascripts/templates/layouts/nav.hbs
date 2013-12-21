@@ -1,0 +1,54 @@
+<header>
+  <div class="add-wall-row foldout-menu">
+    <button class="show-menu">&#10133;</button>
+    <div class="foldout-content">
+      <ul>
+        <li>
+          {{#view App.AddRemoveView action="createRow"}}
+            + New row
+          {{/view}}
+        </li>
+        <li>
+          {{#view App.AddRemoveView action="showForm" target='view'}}
+            + New wall
+          {{/view}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="remove-wall-row foldout-menu">
+    <button class="show-menu">&#59177;</button>
+    <div class="foldout-content">
+      <ul>
+        {{#each row in controller.controllers.wall.rows}}
+          <li>
+            {{#view App.AddRemoveView action="deleteRow" row=row}}
+              Remove row
+            {{/view}}
+          </li>
+        {{/each}}
+        <li class="delete-wall">
+          {{#view App.AddRemoveView action="deleteWall"}}
+            Delete this wall
+          {{/view}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="all-walls foldout-menu">
+    <button class="show-menu">&#128248;</button>
+    <div class="foldout-content">
+      <ul>
+        {{#each wall in controller.controllers.walls}}
+          <li>
+            {{#link-to 'wall' wall}}
+              {{wall.name}}
+            {{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="logo"></div>
+</header>

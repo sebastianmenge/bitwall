@@ -44,15 +44,12 @@ header {
       position: relative;
       padding: 0;
       min-width: 142px;
-      font-size: 15px;
+      font-size: 14px;
       li {
         padding: 0;
-        &:first-child {
-          border-bottom: 1px solid rgb(238, 236, 236);
-        }
-        &.delete-wall {
-          button { color: #dc1000; }
-          border-top: 1px solid rgb(238, 236, 236);
+        border-bottom: 1px solid rgb(238, 236, 236);
+        &:last-child {
+          border-bottom: none;
         }
         button, a {
           text-decoration: none;
@@ -62,11 +59,15 @@ header {
           outline: none;
           background: none;
           width: 100%;
-          padding: 12px;
+          padding: 10px 0 9px;
           display: block;
+          color: #212121;
+        }
+        &.delete-wall {
+          button { color: #dc1000; }
         }
         &:hover {
-          background: #dfdfdf;
+          background: #fafafa;
         }
       }
     }
