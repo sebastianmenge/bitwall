@@ -6,7 +6,7 @@ header {
   z-index: 50;
   background: #2e2e2e;
   height: 100%;
-  width: 50px;
+  width: 43px;
   .foldout-menu {
     font-family: 'icons';
     position: relative;
@@ -17,11 +17,11 @@ header {
       font-family: 'icons';
       outline: none;
       background: #3A3A3A;
-      width: 50px;
-      height: 50px;
+      width: 43px;
+      height: 43px;
       border: none;
       color: #DBDBDB;
-      font-size: 65px;
+      font-size: 59px;
       padding-top: 5px;
       line-height: 23px;
     }
@@ -39,7 +39,7 @@ header {
       display: none;
       list-style-type: none;
       margin: 0;
-      margin-left: 50px;
+      margin-left: 43px;
       background: white;
       position: relative;
       padding: 0;
@@ -78,13 +78,13 @@ header {
   .remove-wall-row {
     margin-top: 2px;
     .show-menu {
-      font-size: 44px;
+      font-size: 38px;
     }
   }
   .all-walls {
     margin-top: 2px;
     .show-menu {
-      font-size: 45px;
+      font-size: 53px;
     }
   }
   .logo {
@@ -93,5 +93,7 @@ header {
     height: 150px;
     position: absolute;
     bottom: 16px;
+    background-size: 53%;
+    left: -2px;
   }
 }

@@ -3,5 +3,5 @@ App.NewWallView = Ember.View.extend
   keyDown: (e)->
     if e.keyCode == 13
       val = @.$().val()
-      console.log val
       @get('controller').send('createWall', val)
+      @.$().val("")

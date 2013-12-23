@@ -12,6 +12,7 @@ module Api
 
     def create
       @wall = Wall.create(wall_params)
+      @wall.notes.create(row: 1)
       render json: @wall
     end
 

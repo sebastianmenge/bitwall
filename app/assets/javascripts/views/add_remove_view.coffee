@@ -17,4 +17,6 @@ App.AddRemoveView = Ember.View.extend Ember.TargetActionSupport,
     $(".row").removeClass('highlight')
 
   showForm: ->
-    $('.new-wall-overlay').fadeIn()
+    $('.new-wall-overlay')
+      .fadeIn()
+      .find('input').focus()

@@ -4,8 +4,6 @@ App.WallController = Ember.ObjectController.extend
   needs: ['walls']
   init: ->
     @_super()
-  createWall: ->
-    alert "called"
   actions:
     createRow: ->
       if @get('rows').length == 5
@@ -29,7 +27,7 @@ App.WallController = Ember.ObjectController.extend
           @_batchDelete(toDelete, rows)
 
     createWall: (name)->
-      wall = App.Wall.create(name: name)
+      wall = App.Wall.create(name: name, rows: [1])
       wall.saveRecord()
       @get('controllers.walls').addObject(wall)
       wall.on 'didCreate', =>
@@ -53,17 +51,7 @@ App.WallController = Ember.ObjectController.extend
       note.saveRecord()
       @get('notes').addObject(note)
 
-  # Actions END -------------------------------------------
-
-  _batchDelete: (notes, rows)->
-    ids = notes.map (note, i, a)->note.get('id')
-    $.ajax
-      url: "api/notes/batch_destroy.json"
-      method: "POST"
-      data:
-        ids: ids
-        wall_id: @get('id')
-        rows: rows
+# Properties -------------------------------------------
 
   row_1: (->
     @get('notes').filterBy('row', 1)
@@ -84,3 +72,16 @@ App.WallController = Ember.ObjectController.extend
   row_5: (->
     @get('notes').filterBy('row', 5)
   ).property('notes.@each')
+
+# Private -------------------------------------------
+
+  _batchDelete: (notes, rows)->
+    ids = notes.map (note, i, a)->note.get('id')
+    $.ajax
+      url: "api/notes/batch_destroy.json"
+      method: "POST"
+      data:
+        ids: ids
+        wall_id: @get('id')
+        rows: rows
+

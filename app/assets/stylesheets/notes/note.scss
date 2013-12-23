@@ -3,31 +3,30 @@
   position: absolute;
   top: 0;
   right: 0px;
-  background: #4B4B4B;
-  color: #DBDBDB;
+  background: #3a3a3a;
+  color: #f9f9f9;
   height: 100%;
-  width: 35px;
+  width: 30px;
   border: none;
   cursor: pointer;
-  font-size: 58px;
+  font-size: 51px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   outline: none;
   &:hover {
     background: darken(#4B4B4B, 5%);
-    color: #f7f7f7;
+    // color: #f7f7f7;
   }
 }
 
 .note-element {
   flex-grow: 1;
   position: relative;
-  border-right: 1px dotted #DBD161;
-  // border-top: 3px solid #EEE471;
+  border-right: 1px dashed #D5CE81;
   border-top-style: solid;
-  border-top-width: 2px;
-  color: #1A1A1A;
+  border-top-width: 3px;
+  color: #000;
   overflow: hidden;
-  background: #F5F0BA;
+  background: image-url('bg_tile2.jpg');
   .display-area, .editing-area {
     position: absolute;
     top: 0;
@@ -36,7 +35,7 @@
     height: 100%;
     font-size: 13px;
     word-break: break-word;
-    padding: 16px 21px;
+    padding: 18px 21px;
     line-height: 18px;
   }
   .display-area {
@@ -44,11 +43,12 @@
     margin: 0;
     overflow: auto;
     white-space: pre-line;
-    font-family: "adelle-sans";
-    font-weight: 300;
+    font-family: $font;
+    // Gudea, open-sans, adelle-sans
+    font-weight: 400;
   }
   .editing-area {
-    font-family: "adelle-sans";
+    font-family: $font;
     background: none;
     border: none;
     outline: none;
@@ -82,7 +82,7 @@
       background: none;
       border: none;
       &:hover {
-        color: #f21102;
+        color: #EB5E55;
       }
     }
   }
