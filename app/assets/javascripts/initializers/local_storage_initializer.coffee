@@ -1,6 +1,6 @@
 Ember.Application.initializer
   name: "localStorage"
   initialize: ->
-    namespace = localStorage.getItem('bitwall')
+    namespace = localStorage.getItem('bitlog')
     if !namespace?
-      localStorage.setItem('bitwall', {})
+      localStorage.setItem('bitlog', {})

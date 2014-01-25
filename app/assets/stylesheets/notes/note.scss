@@ -21,7 +21,7 @@
 .note-element {
   flex-grow: 1;
   position: relative;
-  border-right: 1px dashed #D5CE81;
+  border-right: 1px dashed #B9B15B;
   border-top-style: solid;
   border-top-width: 3px;
   color: #000;
@@ -44,6 +44,7 @@
     overflow: auto;
     white-space: pre-line;
     font-family: $font;
+    font-family: 'open-sans';
     // Gudea, open-sans, adelle-sans
     font-weight: 400;
   }

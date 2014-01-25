@@ -1,4 +1,4 @@
-Bitwall::Application.routes.draw do
+Bitlog::Application.routes.draw do
   namespace :api do
     resources :walls
     resources :notes do

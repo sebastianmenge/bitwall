@@ -7,7 +7,7 @@
 //= require ember
 //= require ember-restless
 //= require_self
-//= require bitwall
+//= require bitlog
 
 window.App = Ember.Application.create();
 
