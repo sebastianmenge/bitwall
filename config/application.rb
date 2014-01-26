@@ -22,6 +22,7 @@ module Bitlog
     config.handlebars.templates_root = ["jsapp/templates"]
 
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    config.assets.precompile += %w(.svg .eot .woff .ttf)
 
     config.assets.precompile += ['jsapp.css']
     config.assets.precompile += ['jsapp.js']
