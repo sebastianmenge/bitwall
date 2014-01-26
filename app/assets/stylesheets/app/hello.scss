@@ -80,6 +80,7 @@ footer {
     position: absolute;
     left: 15px;
     font-weight: normal;
+    text-rendering: optimizeLegibility;
   }
   &.with_fb_small {
     display: inline;
