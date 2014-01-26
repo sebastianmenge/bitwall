@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bitlog</title>
+  <%= stylesheet_link_tag    "jsapp", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "jsapp", "data-turbolinks-track" => true %>
+  <script type="text/javascript" src="//use.typekit.net/wet5tvd.js"></script>
+  <script type="text/javascript">
+    try{Typekit.load();}catch(e){}
+  </script>
+  <link href='http://fonts.googleapis.com/css?family=Gudea:400,700' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

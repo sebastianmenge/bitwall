@@ -1,4 +1,11 @@
 Bitlog::Application.routes.draw do
+  get 'auth/:provider/callback' => 'sessions#create'
+  get 'auth/failure' => redirect('/')
+  get 'signout' => 'sessions#destroy', as: 'signout'
+
+  get 'hello' => 'home#index'
+  get 'app' => 'home#app'
+
   namespace :api do
     resources :walls
     resources :notes do
@@ -7,6 +14,7 @@ Bitlog::Application.routes.draw do
   end
 
   root 'home#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,13 +1,9 @@
 module Api
   class NotesController < BaseController
     before_filter :set_note, only: [:update, :destroy]
-    def index
-      @notes = Note.all
-      render json: @notes
-    end
 
     def create
-      @wall = Wall.find(params[:note][:wall_id])
+      @wall = current_user.walls.find(params[:note][:wall_id])
       @note = @wall.notes.create(note_params)
       render json: @note
     end

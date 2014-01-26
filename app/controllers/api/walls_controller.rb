@@ -2,7 +2,7 @@ module Api
   class WallsController < BaseController
     before_filter :set_wall, only: [:show, :destroy, :update]
     def index
-      @walls = Wall.order('id ASC')
+      @walls = current_user.walls.order('id ASC')
       render json: @walls
     end
 
@@ -11,7 +11,7 @@ module Api
     end
 
     def create
-      @wall = Wall.create(wall_params)
+      @wall = current_user.walls.create(wall_params)
       @wall.notes.create(row: 1)
       render json: @wall
     end
@@ -28,7 +28,7 @@ module Api
 
     private
       def set_wall
-        @wall = Wall.find(params[:id])
+        @wall = current_user.walls.find(params[:id])
       end
 
       def wall_params
