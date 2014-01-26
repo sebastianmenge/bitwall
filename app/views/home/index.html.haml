@@ -1,3 +1,26 @@
-%h1 Login here
+.main-container
+  %header
+    .content
+      = image_tag "bw-logo.png", class: "logo"
+      %nav
+        %ul
+          %li
+            = link_to "Log in", "/auth/facebook?display=popup", :class => "login_with_fb with_fb_small", :"data-width" => 600, :"data-height" => 400
 
-= link_to "Log in with Facebook", "/auth/facebook?display=popup", :class => "login_with_fb", :"data-width" => 600, :"data-height" => 400
+  %section.billboard
+    .content
+      %h1 The easiest way to take and read your everyday notes. Anytime. Anywhere.
+      %p bitlog enables you to have a quick view on your notes on all your devices.
+      = link_to("/auth/facebook?display=popup", :class => "login_with_fb", :"data-width" => 600, :"data-height" => 400) do
+        %span &#62220;
+        Log in with Facebook
+
+  %section.info
+    .content
+      %h3 Web / Desktop Client
+      %p Our web client is fully functional and constantly being improved
+      %h3 Mobile app
+      %p We are working on a mobile client and it will be released soon...
+%footer
+  .content
+    %p BITLOG.IO | © 2013 BITYARD ALL RIGHTS RESERVED.

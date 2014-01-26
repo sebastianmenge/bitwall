@@ -4,3 +4,10 @@
   src: font-url('/assets/icons/entypo.eot?#iefix') format('embedded-opentype'),
        font-url('/assets/icons/entypo.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'social';
+  src: font-url('/assets/icons/entypo-social.eot');
+  src: font-url('/assets/icons/entypo-social.eot?#iefix') format('embedded-opentype'),
+       font-url('/assets/icons/entypo-social.woff') format('woff');
+}

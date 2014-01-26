@@ -37,15 +37,13 @@
     word-break: break-word;
     padding: 18px 21px;
     line-height: 18px;
+    font-family: "helvetica neue", arial, sans-serif;
   }
   .display-area {
     z-index: 2;
     margin: 0;
     overflow: auto;
     white-space: pre-line;
-    font-family: $font;
-    font-family: 'open-sans';
-    // Gudea, open-sans, adelle-sans
     font-weight: 400;
   }
   .editing-area {
