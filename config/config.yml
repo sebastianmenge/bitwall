@@ -1,0 +1,22 @@
+defaults: &defaults
+
+development:
+  <<: *defaults
+  facebook:
+    app_id: "1399261643661685"
+    secret: "aa152ed74ff5439ab256a1f46b8801e4"
+
+staging:
+  <<: *defaults
+  facebook:
+    app_id:
+    secret:
+
+production:
+  <<: *defaults
+  facebook:
+    app_id: "600150866742278"
+    secret: "1c857e569f756cc84581b83cff166ee8"
+
+test:
+  <<: *defaults
