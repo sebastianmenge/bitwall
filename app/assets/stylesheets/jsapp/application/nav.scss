@@ -12,13 +12,20 @@ header {
     list-style-type: none;
     margin: 0;
     font-size: 14px;
+    counter-reset: row;
     &.all-rows {
       margin-top: 100px;
+      .new-row {
+        button:hover {
+          background: #E0E0E0;
+        }
+      }
+      li span:before {
+        counter-increment: row;
+        content: "Remove row " counter(row);
+      }
       li button:hover {
         background: #F44;
-      }
-      .new-row button:hover {
-        background: #E0E0E0;
       }
     }
     li {

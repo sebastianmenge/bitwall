@@ -9,7 +9,7 @@ App.WallController = Ember.ObjectController.extend
       if @get('rows').length == 4
         alert "Sorry, you have reached the maximum number of rows for this wall. Please create a new wall."
       else
-        diff = (_.difference([1, 2, 3, 4, 5], @get('rows')))[0]
+        diff = (_.difference([1, 2, 3, 4], @get('rows')))[0]
         @set('rows', @get('rows').addObject(diff))
         wall = @get('content')
         wall.set('isDirty', true)

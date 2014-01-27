@@ -19,7 +19,7 @@
     </li>
   </ul>
 
-  <ul class="menu-list all-rows">
+  <ol class="menu-list all-rows">
     <li class="new-row">
       {{#view App.AddRemoveView action="createRow"}}
         + New row
@@ -28,11 +28,11 @@
     {{#each row in controller.controllers.wall.rows}}
       <li>
         {{#view App.AddRemoveView action="deleteRow" row=row}}
-          Remove row
+        <span></span>
         {{/view}}
       </li>
     {{/each}}
-  </ul>
+  </ol>
 
   <div class="logo"></div>
 </header>
