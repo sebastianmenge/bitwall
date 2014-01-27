@@ -13,8 +13,8 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   outline: none;
   &.icon-plus3:before {
-    position: relative;
-    left: -4px;
+    position: absolute;
+    left: 1px;
   }
   &:hover {
     background: darken(#4B4B4B, 5%);
