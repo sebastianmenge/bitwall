@@ -6,7 +6,7 @@ App.WallController = Ember.ObjectController.extend
     @_super()
   actions:
     createRow: ->
-      if @get('rows').length == 5
+      if @get('rows').length == 4
         alert "Sorry, you have reached the maximum number of rows for this wall. Please create a new wall."
       else
         diff = (_.difference([1, 2, 3, 4, 5], @get('rows')))[0]
