@@ -4,6 +4,7 @@ Bitlog::Application.routes.draw do
   get 'signout' => 'sessions#destroy', as: 'signout'
 
   get 'hello' => 'home#index'
+  get 'redirect' => 'home#redirect'
   get 'app' => 'home#app'
 
   namespace :api do

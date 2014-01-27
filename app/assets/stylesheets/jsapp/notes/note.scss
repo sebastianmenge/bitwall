@@ -9,12 +9,15 @@
   width: 30px;
   border: none;
   cursor: pointer;
-  font-size: 51px;
+  font-size: 28px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   outline: none;
+  &.icon-plus3:before {
+    position: relative;
+    left: -4px;
+  }
   &:hover {
     background: darken(#4B4B4B, 5%);
-    // color: #f7f7f7;
   }
 }
 
@@ -76,10 +79,10 @@
     .delete-note {
       float: right;
       outline: none;
-      font-family: 'icons';
       color: rgba(0, 0, 0, 0.45);
       background: none;
       border: none;
+      font-size: 18px;
       &:hover {
         color: #EB5E55;
       }

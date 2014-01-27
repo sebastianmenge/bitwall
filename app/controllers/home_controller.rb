@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
-  before_filter :authorize
+  before_filter :authorize, :except => [:redirect]
+
+  def redirect
+    render layout: false
+  end
 
   def index
   end

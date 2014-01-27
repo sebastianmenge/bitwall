@@ -14,6 +14,7 @@ App.WallController = Ember.ObjectController.extend
         wall = @get('content')
         wall.set('isDirty', true)
         wall.saveRecord()
+        @send('createNote', diff)
 
     deleteRow: (row)->
       if @get('rows').length == 1
