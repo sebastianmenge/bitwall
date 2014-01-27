@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  after_create :create_initial
   has_many :walls, dependent: :destroy
 
   def self.from_omniauth(auth)
@@ -11,5 +12,10 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.save!
     end
+  end
+
+  private
+  def create_initial
+    Wall.create_initial(self)
   end
 end
