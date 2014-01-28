@@ -32,7 +32,7 @@ module Api
       end
 
       def wall_params
-        params.require(:wall).permit(:name, {:rows => []}, :height_1, :height_2, :height_3, :height_4)
+        params.require(:wall).permit(:name, {:rows => []})
       end
   end
 end

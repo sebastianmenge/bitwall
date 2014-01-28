@@ -32,7 +32,7 @@ module Api
       end
 
       def note_params
-        params.require(:note).permit(:body, :color, :width, :row)
+        params.require(:note).permit(:body, :row)
       end
   end
 end

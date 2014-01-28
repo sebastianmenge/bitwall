@@ -1,4 +1,4 @@
 class WallSerializer < ActiveModel::Serializer
-  attributes :id, :name, :rows, :height_1, :height_2, :height_3, :height_4
+  attributes :id, :name, :rows
   has_many :notes
 end

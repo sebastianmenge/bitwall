@@ -22,7 +22,12 @@
 }
 
 .note-element {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
   position: relative;
   border-right: 1px dashed #B9B15B;
   border-top-style: solid;
