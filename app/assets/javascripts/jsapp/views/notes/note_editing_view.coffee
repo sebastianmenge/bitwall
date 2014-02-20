@@ -14,7 +14,7 @@ App.NoteEditingView = Ember.TextArea.extend
       toolbar:      toolbarId
       parserRules:  wysihtml5ParserRules
       autoLink: true
-      stylesheets: ["assets/wysi.css"]
+      stylesheets: ["/wysi.css"]
       useLineBreaks: false
     @activateEvents()
 
