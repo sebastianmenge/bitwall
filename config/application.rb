@@ -25,6 +25,7 @@ module Bitlog
     config.assets.precompile += %w(.svg .eot .woff .ttf)
 
     config.assets.precompile += ['jsapp.css']
+    config.assets.precompile += ['wysi.css']
     config.assets.precompile += ['jsapp.js']
   end
 end
