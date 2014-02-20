@@ -1,8 +1,4 @@
-{{#view App.NoteDisplayView class="display-area"}}
-  {{note.body}}
-{{/view}}
-
-{{view App.NoteEditingView class="editing-area" value=note.body}}
+{{view App.NoteEditingView class="editing-area" valueBinding="note.body"}}
 
 <div class="note-settings">
   <ul class="actions">
@@ -10,4 +6,18 @@
       <button {{action delete}} class="delete-note"><span class="icon-trash"></span></button>
     </li>
   </ul>
+</div>
+
+
+<div {{bindAttr id="view.toolbarId"}} class="bitlog-wysi">
+  <a data-wysihtml5-command="bold" class="wysi-bold">
+    B
+  </a>
+  <a data-wysihtml5-command="strike" class="wysi-strike">
+    S
+  </a>
+  <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red" class="wysi-red wysi-color">
+  </a>
+  <a data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green" class="wysi-green wysi-color">
+  </a>
 </div>

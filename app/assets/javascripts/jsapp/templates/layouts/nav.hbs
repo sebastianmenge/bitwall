@@ -27,6 +27,7 @@
     </li>
     {{#each row in controller.controllers.wall.rows}}
       <li>
+        {{controller}}
         {{#view App.AddRemoveView action="deleteRow" row=row}}
         <span></span>
         {{/view}}

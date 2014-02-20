@@ -2,6 +2,8 @@
 //= jquery-ui-1.10.3.custom.min
 //= require jquery_ujs
 //= require turbolinks
+//= require advanced
+//= require wysihtml5-0.3.0
 //= require underscore-min.js
 //= require handlebars
 //= require ember

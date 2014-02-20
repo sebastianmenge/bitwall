@@ -1,11 +1,11 @@
-App.NoteView = Ember.View.extend
+App.NoteView = Ember.View.extend Ember.TargetActionSupport,
   classNames: ['note-element']
   attributeBindings: ['style']
   templateName: "notes/note"
-  # style: (->
-  #   color = @get('color')
-  #   "background: #{color};"
-  # ).property('color')
+  toolbarId: (->
+    id = Math.floor(Math.random() * (100 -10) * 10)
+    "bitlog-wysi-#{id}"
+  ).property()
 
   mouseEnter: ->
     @toggleSettings('In')
