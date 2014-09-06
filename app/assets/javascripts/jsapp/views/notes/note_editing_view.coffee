@@ -20,7 +20,7 @@ App.NoteEditingView = Ember.TextArea.extend
 
   activateEvents: ->
     parentEl = @.$().parents('.note-element')
-    toolbar = parentEl.find('.bitlog-wysi')
+    toolbar = parentEl.find('.bitwall-wysi')
     editor = parentEl.find('.wysihtml5-sandbox').contents().find('body')
     editor.on "blur", =>
       toolbar.fadeOut(200)

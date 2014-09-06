@@ -1,4 +1,4 @@
-Bitlog::Application.configure do
+Bitwall::Application.configure do
   config.ember.variant = :production
   # Settings specified here will take precedence over those in config/application.rb.
 

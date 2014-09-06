@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Bitlog::Application.load_tasks
+Bitwall::Application.load_tasks

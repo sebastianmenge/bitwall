@@ -4,7 +4,7 @@ App.NoteView = Ember.View.extend Ember.TargetActionSupport,
   templateName: "notes/note"
   toolbarId: (->
     id = Math.floor(Math.random() * (100 -10) * 10)
-    "bitlog-wysi-#{id}"
+    "bitwall-wysi-#{id}"
   ).property()
 
   mouseEnter: ->
