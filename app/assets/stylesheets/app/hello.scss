@@ -5,7 +5,7 @@ body {
 }
 .main-container {
   height: 100%;
-  background: linear-gradient(to bottom, rgba(216,193,23, .93) 0%,rgba(216,193,23, .68) 55%,rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(216,193,23, .94) 0%,rgba(216,193,23, .78) 55%,rgba(255, 255, 255, 0) 100%);
 }
 
 .billboard {
@@ -38,12 +38,14 @@ footer {
     padding: 0 20px;
     @include flexbox();
     justify-content: center;
+    -webkit-justify-content: center;
     align-items: center;
+    -webkit-align-items: center;
     min-height: 100%;
   }
   p {
     font-size: 13px;
-    color: #393939;
+    color: #646464;
   }
 }
 
