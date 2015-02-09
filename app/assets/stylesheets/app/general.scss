@@ -1,4 +1,4 @@
-$font: "open-sans", "helvetica neue", helvetica, arial, sans-serif;
+$font: "ff-tisa-sans-web-pro", "helvetica neue", helvetica, arial, sans-serif;
 
 * {
   box-sizing: border-box;
@@ -10,20 +10,6 @@ html, body, pre {
   min-height: 100%;
   font-family: $font;
 }
-
-body {
-  background: image-url('bg_tile_lighter.jpg');
-}
-
-// .main-container {
-//   min-height: 100%;
-//   margin-bottom: -64px;
-//   &:after {
-//     content: "";
-//     display: block;
-//     height: 64px;
-//   }
-// }
 
 header, section, footer {
   .content {
