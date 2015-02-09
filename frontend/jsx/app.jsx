@@ -19,6 +19,9 @@ var App = React.createClass({
   //     me: Store.Educator.getMeAny()
   //   }
   // },
+  componentDidMount: function() {
+    console.log("triggered");
+  },
 
   render: function(){
     return <div>

@@ -5,7 +5,6 @@ Bitwall::Application.routes.draw do
 
   get 'hello' => 'home#index'
   get 'redirect' => 'home#redirect'
-  get 'app' => 'home#app'
 
   namespace :api do
     resources :walls

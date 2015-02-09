@@ -8,10 +8,6 @@ class HomeController < ApplicationController
   def index
   end
 
-  def app
-    render layout: "jsapp"
-  end
-
   private
   def authorize
     if session[:user_id] && !oauth_token_expired?
