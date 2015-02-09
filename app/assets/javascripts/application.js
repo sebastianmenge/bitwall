@@ -4,3 +4,6 @@
 //= require turbolinks
 //= require underscore-min
 //= require app/fb_popup
+
+//= require app/fb_popup
+

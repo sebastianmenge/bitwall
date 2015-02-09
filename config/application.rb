@@ -24,8 +24,8 @@ module Bitwall
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
     config.assets.precompile += %w(.svg .eot .woff .ttf)
 
-    config.assets.precompile += ['jsapp.css']
+    config.assets.precompile += ['frontend.css']
     # config.assets.precompile += ['wysi.css']
-    config.assets.precompile += ['jsapp.js']
+    config.assets.precompile += ['frontend.js']
   end
 end
