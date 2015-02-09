@@ -1,26 +1,15 @@
 .main-container
-  %header
-    .content
-      = image_tag "bw-logo.svg", class: "logo", height: "28px"
-      %nav
-        %ul
-          %li
-            = link_to "Log in", "/auth/facebook?display=popup", :class => "login_with_fb with_fb_small", :"data-width" => 600, :"data-height" => 400
-
   %section.billboard
     .content
-      %h1 The easiest way to take and read your everyday notes. Anytime. Anywhere.
-      %p bitwall enables you to have a quick view on your notes on all your devices.
+      = image_tag "bw-logo.png", class: "logo", width: "145"
+      %h1.headline
+        The easiest way to take and read your everyday notes.
+      %h1.headline.headline-inv
+        Anytime. Anywhere.
       = link_to("/auth/facebook?display=popup", :class => "login_with_fb", :"data-width" => 600, :"data-height" => 400) do
         %span.icon-facebook
         Log in with Facebook
 
-  %section.info
-    .content
-      %h3 Web / Desktop Client
-      %p Our web client is fully functional and constantly being improved
-      %h3 Mobile app
-      %p We are working on a mobile client and it will be released soon...
 %footer
   .content
-    %p BITWALLAPP.COM | © 2013 BITYARD ALL RIGHTS RESERVED.
+    %p bitwallapp.com | © 2015 Bitwall All rights reserved.
