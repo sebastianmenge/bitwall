@@ -21,6 +21,7 @@ vendor/gems
 nohup.out
 .projectile
 public/assets
+frontend/node_modules
 config/locales/*
 !config/locales/en.yml
 app/assets/javascripts/i18n/translations_*.js
