@@ -8,8 +8,8 @@ var React = require("react"),
     RouteHandler = Router.RouteHandler,
     Promise = require("bluebird");
 
-var Show = require("./sections/walls/_show.jsx"),
-    Index = require("./sections/walls/_index.jsx")
+var Show = require("./sections/walls/_show.jsx");
+
 
 var App = React.createClass({
   // mixins: [StoreState(Store.Educator)],
@@ -25,18 +25,15 @@ var App = React.createClass({
 
   render: function(){
     return <div>
-      <Link to="walls">Walls</Link>
       <Link to="wall" params={{wallId: "123"}}>Wall</Link>
       <RouteHandler/>
     </div>
   }
-})
+});
 
 var routes = (
   <Route handler={App} path="/">
-    <Route name="walls" path="/walls" handler={Index} >
-      <Route name="wall" path="/:wallId" handler={Show} />
-    <Route/>
+    <Route name="wall" path="walls/:wallId" handler={Show} />
   </Route>
 );
 
@@ -47,12 +44,11 @@ window.onload = function() {
   Router.run(routes, Router.HistoryLocation, function (Handler) {
     React.render(<Handler/>, document.getElementById("app"));
   });
-}
+};
 
 
 // Store.Educator.init(EDUCATOR_ID).then(e => Store.Plan.init()).then(Store.Alert.init()).then(Store.Processing.init()).then(function(){
 //   React.renderComponent(routes, document.getElementById("app"))
 // })
 
-// play nicely with chrome react developer extension
 window.React = React;

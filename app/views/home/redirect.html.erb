@@ -1,0 +1,8 @@
+<script type="text/javascript">
+  if(window.opener) {
+    window.opener.location = "/walls/<%= @wall_id %>"
+    window.close()
+  } else {
+    window.location = "/walls/<%= @wall_id %>"
+  }
+</script>

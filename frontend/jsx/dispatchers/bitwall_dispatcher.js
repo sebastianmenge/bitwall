@@ -1,7 +1,7 @@
 var _ = require("underscore"),
     Dispatcher = require("./flux_dispatcher.js")
 
-var PatienceDispatcher = _.extend(new Dispatcher(), {
+var BitwallDispatcher = _.extend(new Dispatcher(), {
 
   handleServerAction: function(action) {
     var payload = {
@@ -21,4 +21,4 @@ var PatienceDispatcher = _.extend(new Dispatcher(), {
 
 })
 
-module.exports = PatienceDispatcher
+module.exports = BitwallDispatcher

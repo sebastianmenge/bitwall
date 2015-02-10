@@ -3,6 +3,9 @@
 <head>
   <title>Bitwall</title>
   <%#= stylesheet_link_tag "wysi", media: "all"%>
+  <script type="text/javascript">
+    var WALL_ID = <%= @wall_id%>
+  </script>
   <%= stylesheet_link_tag    "frontend", media: "all" %>
   <%= javascript_include_tag "frontend" %>
   <script type="text/javascript" src="//use.typekit.net/wet5tvd.js"></script>
