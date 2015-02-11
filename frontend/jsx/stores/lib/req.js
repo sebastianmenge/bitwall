@@ -25,16 +25,12 @@ var req = function(method, url, data, extractKey){
   if(method == "delete")
     method = "del"
 
-  var r = request[method.toLowerCase()](url.indexOf("://") == -1 ? ("https://"+API_HOST+url) : url)
+  var r = request[method.toLowerCase()]("/api/"+url+".json")
 
   r.type("application/json")
 
   if(data) r.send(transformRequest(data));
   if(data && method=="get") r.query(transformRequest(data));
-
-
-  r.set("X-Edu-Token", EDUCATOR_TOKEN)
-  r.set("X-Auth-Token", decodeURIComponent(getCookie("admin_auth_token")))
 
   return new Promise(function(resolve, reject){
     r.end(function(res){
