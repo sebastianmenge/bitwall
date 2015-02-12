@@ -1,43 +1,47 @@
-// play nicely with other components/dependencies requiring jquery
-
 var React = require("react"),
     Router = require("react-router"),
+    _ = require("underscore"),
     Route = Router.Route,
     Link = Router.Link,
     DefaultRoute = Router.DefaultRoute,
     RouteHandler = Router.RouteHandler,
-
     Promise = require("bluebird"),
     WallStore = require("./stores/flux/wall_store.js");
     StoreState = require("./mixins/store_state.js");
 
-var Show = require("./sections/walls/_show.jsx");
+var WallNav = require("./components/wall_nav.jsx");
+    Show = require("./components/wall/_wall.jsx");
 
 
 var App = React.createClass({
-  mixins: [StoreState(WallStore)],
+  mixins: [StoreState(WallStore), Router.State],
   getStoreState: function(){
     return {
       walls: WallStore.getWalls(),
     }
   },
-  componentDidMount: function() {
-    console.log("triggered");
-  },
 
   render: function(){
-    return <div>
-      <Link to="wall" params={{wallId: "123"}}>Wall</Link>
-      <RouteHandler/>
+    var currentWallId = parseInt(this.getParams().wallId),
+        currentWall = _.findWhere(this.state.walls, {id: currentWallId}),
+        rows = currentWall.rows;
+
+    return <div className='application-container'>
+      <WallNav walls={this.state.walls} rows={rows}/>
+      <RouteHandler wall={currentWall}/>
     </div>
   }
 });
+
+// ROUTES
 
 var routes = (
   <Route handler={App} path="/">
     <Route name="wall" path="walls/:wallId" handler={Show} />
   </Route>
 );
+
+// INITIALIZATION
 
 WallStore.init().then(function(){
   Router.run(routes, Router.HistoryLocation, function (Handler) {

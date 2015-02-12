@@ -11,7 +11,7 @@ html, body, pre {
   font-family: $font;
 }
 
-.application-container {
+.application-container, #app {
   position: relative;
   height: 100%;
 }

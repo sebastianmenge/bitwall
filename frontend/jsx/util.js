@@ -94,5 +94,36 @@ var copy = function(any){
   return any
 }
 
-module.exports = {copy, underscored, camelize}
+// ------------------- Note border colors -----------------------
+
+var arrRepeat = function(arr, times) {
+  var repeated = [],
+      times = parseInt(times) || 1;
+  for (var i = 0; i < times; i++) {
+    repeated = repeated.concat(arr);
+  };
+  return _.flatten(repeated);
+}
+
+var createHSLs = function(repeater) {
+  var colors = [],
+      hues = [7, 24, 32, 45, 57, 67, 76, 93, 130, 152, 183, 196, 212],
+      shades = 1;
+
+  for (var i = 0; i < hues.length; i++) {
+    var hue = hues[i],
+        lightness = 46;
+
+    for (var j = 0; j < shades; j++) {
+      lightness -= 4;
+      hsl = 'hsl(' + hue + ', 100%, ' + lightness + '%)';
+      colors.push(hsl);
+    }
+  };
+  return arrRepeat(colors, repeater);
+}
+
+
+
+module.exports = {copy, underscored, camelize, createHSLs}
 

@@ -12,9 +12,9 @@ var WallStore = _.extend(new FluxStore("wall"),{
 });
 
 WallStore.initialize = function() {
-  var walls = req('GET', 'walls');
+  var walls = req('GET', 'walls', {}, 'walls');
 
-  return Promise.join(walls, function(walls){
+  return Promise.join(walls, function(walls) {
     WallStore._walls = walls
   })
 },
