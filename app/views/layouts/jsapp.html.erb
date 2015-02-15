@@ -6,8 +6,13 @@
   <script type="text/javascript">
     var WALL_ID = <%= @wall_id%>
   </script>
+
   <%= stylesheet_link_tag    "frontend", media: "all" %>
-  <%= javascript_include_tag "frontend" %>
+  <% if Rails.env == 'development' %>
+    <%= javascript_include_tag "frontend_dev" %>
+  <% else %>
+    <%= javascript_include_tag "frontend" %>
+  <% end %>
   <script type="text/javascript" src="//use.typekit.net/wet5tvd.js"></script>
   <script type="text/javascript">
     try{Typekit.load();}catch(e){}

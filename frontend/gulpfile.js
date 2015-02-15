@@ -38,9 +38,9 @@ gulp.task('watchify', function() {
         gutil.log(gutil.colors.red("Error: "), error);
       })
       .on("end", function() {
-        gutil.log("Created:", gutil.colors.blue('frontend.js'), (ids||[]).join(", "));
+        gutil.log("Created:", gutil.colors.blue('frontend_dev.js'), (ids||[]).join(", "));
       })
-      .pipe(source('frontend.js'))
+      .pipe(source('frontend_dev.js'))
       .pipe(gulp.dest('../app/assets/javascripts'))
   };
 
