@@ -28,7 +28,7 @@ require('check-dependencies')({
   }
 });
 
-gulp.task('watchify', function() {
+function build(env) {
   var bundler = watchify('./jsx/app.jsx');
 
   var bundle = function(ids){
@@ -38,9 +38,9 @@ gulp.task('watchify', function() {
         gutil.log(gutil.colors.red("Error: "), error);
       })
       .on("end", function() {
-        gutil.log("Created:", gutil.colors.blue('frontend_dev.js'), (ids||[]).join(", "));
+        gutil.log("Created:", gutil.colors.blue(env + '.js'), (ids||[]).join(", "));
       })
-      .pipe(source('frontend_dev.js'))
+      .pipe(source(env + '.js'))
       .pipe(gulp.dest('../app/assets/javascripts'))
   };
 
@@ -50,6 +50,14 @@ gulp.task('watchify', function() {
           });
 
   return bundle();
+}
+
+gulp.task('watchify_dev', function() {
+  return build('frontend_dev');
+});
+
+gulp.task('watchify_production', function() {
+  return build('frontend');
 });
 
 // gulp.task("less", function(){
@@ -69,4 +77,4 @@ gulp.task('clean', function () {
 
 // gulp.task("install", ["less", "html-to-rails-dev",  "assets"]);
 
-gulp.task("default", ["watchify"]);
+gulp.task("default", ["watchify_dev"]);
